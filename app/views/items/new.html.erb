@@ -1,0 +1,9 @@
+<%= form_for [@user, @item] do |f| %>
+
+    <div class="field">
+      <%= f.label :title %><br />
+      <%= f.email_field :title %>
+    </div>
+
+    <%= f.submit "Add item to wishlist" %>
+  <% end %>

@@ -1,0 +1,12 @@
+
+<% if current_user != @user %>
+<ul>
+  <% @items.each do |item| %>
+    <li><%= item.title %></li>
+  <% end %>
+</ul>
+<% else %>
+  <p>No peeking at your own list until Christmas :p</p>
+<% end %>
+
+<%= link_to "Add an item", new_user_item_path %>
